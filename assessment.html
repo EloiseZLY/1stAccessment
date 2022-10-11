@@ -1,0 +1,251 @@
+<!-- HTML. Create a webpage with a navbar, 
+    some main content with one main header and 4 subheaders and sections, and a footer.
+     Also provide a list of the 10 most useful tags (e.g. div) for you in HTML -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS + HTML Assessment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      .content {
+        position: absolute;
+        left: 50px;
+        top: 90px;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .subnav {
+        float: left;
+        overflow: hidden;
+      }
+
+      .subnav .subnavbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .subnav:hover .subnavbtn {
+        background-color: rgb(0, 98, 255);
+      }
+
+      .subnav-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: rgb(0, 98, 255);
+        width: 100%;
+        z-index: 1;
+      }
+
+      .subnav-content a {
+        float: left;
+        color: white;
+        text-decoration: none;
+      }
+
+      .subnav-content a:hover {
+        background-color: #eee;
+        color: black;
+      }
+
+      .subnav:hover .subnav-content {
+        display: block;
+      }
+      .footer {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+
+      ul {
+        border: 2px solid rebeccapurple;
+      }
+
+      span {
+        border: 2px solid blue;
+      }
+
+      ul {
+        display: inline-flex;
+        list-style: none;
+        padding: 0;
+      }
+      p1 {
+        display: inline-flex;
+        padding: 50px;
+        border: 2px solid green;
+        margin: 10px;
+      }
+      p2 {
+        display: inline-flex;
+        padding: 30px;
+        border: 2px solid red;
+        margin: 5px;
+      }
+
+      .inline {
+        display: inline;
+      }
+      pos1 {
+        border: 2px solid black;
+        position: static;
+      }
+      pos2 {
+        border: 2px solid black;
+        position: relative;
+        top: 120px;
+        left: auto;
+      }
+      pos3 {
+        border: 2px solid black;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+      }
+      pos4 {
+        border: 2px solid black;
+        position: sticky;
+        top: 80px;
+      }
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <!--navigation bar-->
+        <div class="navbar">
+          <a href="#home">Main Header</a>
+
+          <div class="subnav">
+            <button class="subnavbtn">
+              Sub Headers <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="subnav-content">
+              <a href="#SubHeader1">SubHeader1</a>
+              <a href="#SubHeader2">SubHeader2</a>
+              <a href="#SubHeader3">SubHeader3</a>
+              <a href="#SubHeader4">SubHeader4</a>
+            </div>
+          </div>
+        </div>
+        <!--Content-->
+        <div class="content">
+          <section1>
+            <h1>HTML + CSS assessment</h1>
+            <h2>Q1, Top 10 most useful tages in HTM:</h2>
+            <p>
+              <li>a</li>
+              <li>b</li>
+              <li>body</li>
+              <li>div</li>
+              <li>h1</li>
+              <li>span</li>
+              <li>img</li>
+              <li>ol</li>
+              <li>ul</li>
+              <li>p</li>
+            </p>
+          </section1>
+          <section2>
+            <!--2. SEO imporatn tags-->
+            <h2>Q2, List of most important tags for SEO:</h2>
+            <li>H1 heading only can be used once for one page.</li>
+            <li>H2 headings for spliting content into chapters.</li>
+            <li>Title tag should not be too short or too long.</li>
+          </section2>
+          <!--grid 3*3-->
+          <h2>Q3, Create a grid of 3*3 without CSS:</h2>
+          <div class="grid">
+            <div><span> Cell </span><span> Cell </span><span> Cell </span></div>
+            <div><span> Cell </span><span> Cell </span><span> Cell </span></div>
+            <div><span> Cell </span><span> Cell </span><span> Cell </span></div>
+          </div>
+          <!--create gallery-->
+          <!-- For each row change the values of border, margin and padding. 
+        For the columns try three different values (e.g. 0px 5px 10px) -->
+          <h2>
+            Q4, Create a gallery that showcases the options for the box model by
+            css:
+          </h2>
+          <div class="row1">
+            I am a paragraph. Some of the
+            <span>words</span> have been wrapped in a <span>span element</span>.
+          </div>
+          <div class="row2">
+            <ul>
+              <span>Item One</span>
+              <span>Item Two</span>
+              <span>Item Three</span>
+            </ul>
+            <p class="inline">I am a <p1>paragraph</p1>. A short one.</p>
+            <p class="inline">
+              I am <p2>another paragraph</p2>. Also a short one.
+            </p>
+          </div>
+          <!-- Q5, Create an itemized list with the same text and 6 different font sizes, use inline styling. 
+      Explain on each item on when would you use that unit by example -->
+          <h2>Q5, Create an itemized list of units with inline styling:</h2>
+          <div class="unit">
+            <li style="font-size: 1vw">Test: 1em, use it</li>
+            <li style="font-size: 10vi">Test: 1em, use it</li>
+            <li style="font-size: 1.5rem">Test: 1em, use it</li>
+            <li style="font-size: 2em">Test: 1em, use it</li>
+            <li style="font-size: 4ex">Test: 1em, use it</li>
+            <li style="font-size: 4ch">Test: 1em, use it</li>
+          </div>
+          <!--Add a creative part of the page that uses 4 different positioningLinks to an external site. options. Try to think and explain when would you use these options.-->
+          <h2>Q6, Create an itemized list of units with inline styling:</h2>
+          <div class="position">
+            <pos1 style="color: rgb(133, 90, 35)"> Test position</pos1>
+            <pos2 style="color: aqua"> Test position</pos2>
+            <pos3 style="color: purple"> Test position</pos3>
+            <pos4 style="color: greenyellow"> Test position</pos4>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="footer">
+        <p>Footer.... @zheng.ling@northeastern.edu</p>
+      </div>
+    </div>
+  </body>
+</html>
